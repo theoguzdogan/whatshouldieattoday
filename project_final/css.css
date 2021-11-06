@@ -1,0 +1,89 @@
+
+*{
+    margin:0;
+    padding:0;
+}
+
+ .container .navbar{ /*navbarın boyutu ve rengi*/
+     width:100%;
+     height: 120px;
+     background-color: #4b7883;
+     opacity: 0.9;
+ }
+
+ .navbar .logo{
+     display:inline-block; /*logo aşağı indiğinde navbarın yeri bozulmasın diye*/
+     margin-left:50 px; 
+     margin-top:20px; /*yukardan aşağıya*/
+ }
+
+
+
+ .navbar ul{
+     margin-top:-125px;
+     float:right; /*liste sağa kaydı*/
+     margin-right:20px; /*20 px uzak sağdan*/
+
+    }
+
+    .navbar ul li{
+        list-style: none; /*listenin önündeki noktalar gidiyor*/
+        display:inline-block; /*yan yana gelmiş oluyor navbardaki liste elemanları*/
+        margin:0 40px; /*aralarını açıyor*/
+        
+    }
+.navbar ul li a{ /*yazıları düzenledi navbardaki*/
+    color:white;
+    text-decoration: none;
+    font-size:20px;
+    padding:6px 13px;
+    transition:.5s;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover{  /*anasayfa hep diğer yazılar üstüne gelindiğinde(hover) rengi değişiyor arkaplanının*/
+    background: #dfad42;
+    border-radius:2px;
+}
+
+.container .center{ /*butonların ve yazıların(center class ındaki) konumunu belirler*/
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    user-select: none; /*kullanıcı yazıyı seçemez,kopyalayamaz.*/
+
+}
+.center h1{
+    color:black;
+    font-size:70px;
+    font-weight:bold;
+    width:900px;
+    text-align:center;
+}
+
+.center h2{
+    color:#74052f;
+    font-size:50px;
+    font-weight:bold;
+    width:885px;
+    margin-top:10px;
+    text-align: center;
+}
+.center .buttons{
+    margin:35px 350px;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 1 / 2 / 2 / 3; }
+    .div3 { grid-area: 2 / 1 / 3 / 3;
+        justify-items: center;
+    }
+
